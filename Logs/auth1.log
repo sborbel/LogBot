@@ -1,0 +1,154 @@
+Feb 28 14:00:50 sborbel-VirtualBox useradd[860]: failed adding user 'vboxadd', data deleted
+Feb 28 14:00:50 sborbel-VirtualBox useradd[861]: failed adding user 'vboxadd', data deleted
+Feb 28 14:00:51 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Feb 28 14:00:51 sborbel-VirtualBox systemd-logind[600]: New session c1 of user gdm.
+Feb 28 14:00:51 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Feb 28 14:00:54 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.49 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 28 14:00:58 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Feb 28 14:01:02 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Feb 28 14:01:02 sborbel-VirtualBox gdm-password]: gkr-pam: unable to locate daemon control file
+Feb 28 14:01:02 sborbel-VirtualBox gdm-password]: gkr-pam: stashed password to try later in open session
+Feb 28 14:01:02 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:session): session opened for user sborbel by (uid=0)
+Feb 28 14:01:02 sborbel-VirtualBox systemd-logind[600]: New session 2 of user sborbel.
+Feb 28 14:01:03 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user sborbel by (uid=0)
+Feb 28 14:01:03 sborbel-VirtualBox gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Feb 28 14:01:04 sborbel-VirtualBox gnome-keyring-daemon[1316]: The PKCS#11 component was already initialized
+Feb 28 14:01:04 sborbel-VirtualBox gnome-keyring-daemon[1316]: The Secret Service was already initialized
+Feb 28 14:01:06 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:2 (system bus name :1.80 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 28 14:01:10 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Feb 28 14:01:10 sborbel-VirtualBox systemd-logind[600]: Session c1 logged out. Waiting for processes to exit.
+Feb 28 14:01:10 sborbel-VirtualBox systemd-logind[600]: Removed session c1.
+Feb 28 14:01:10 sborbel-VirtualBox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.49, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 28 14:01:12 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Feb 28 14:01:12 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Feb 28 14:01:17 sborbel-VirtualBox dbus-daemon[559]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Feb 28 14:02:16 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Feb 28 14:02:16 sborbel-VirtualBox pkexec[2709]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Feb 28 14:02:16 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Feb 28 14:02:16 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Feb 28 14:05:15 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Feb 28 14:05:15 sborbel-VirtualBox pkexec[3224]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Feb 28 14:17:01 sborbel-VirtualBox CRON[3319]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 28 14:17:01 sborbel-VirtualBox CRON[3319]: pam_unix(cron:session): session closed for user root
+Feb 28 14:30:01 sborbel-VirtualBox CRON[3333]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 28 14:30:01 sborbel-VirtualBox CRON[3333]: pam_unix(cron:session): session closed for user root
+Feb 28 14:59:14 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Feb 28 14:59:14 sborbel-VirtualBox pkexec[7370]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Feb 28 15:02:14 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Feb 28 15:02:14 sborbel-VirtualBox pkexec[26789]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Feb 28 15:05:14 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Feb 28 15:05:14 sborbel-VirtualBox pkexec[33720]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Mar  4 14:44:49 sborbel-VirtualBox systemd-logind[617]: New seat seat0.
+Mar  4 14:44:50 sborbel-VirtualBox systemd-logind[617]: Watching system buttons on /dev/input/event0 (Power Button)
+Mar  4 14:44:50 sborbel-VirtualBox systemd-logind[617]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Mar  4 14:44:50 sborbel-VirtualBox systemd-logind[617]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Mar  4 14:44:57 sborbel-VirtualBox useradd[863]: failed adding user 'vboxadd', data deleted
+Mar  4 14:44:57 sborbel-VirtualBox useradd[864]: failed adding user 'vboxadd', data deleted
+Mar  4 14:44:58 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Mar  4 14:44:58 sborbel-VirtualBox systemd-logind[617]: New session c1 of user gdm.
+Mar  4 14:44:58 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Mar  4 14:45:01 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.48 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  4 14:45:05 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 14:45:08 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 14:45:08 sborbel-VirtualBox gdm-password]: gkr-pam: unable to locate daemon control file
+Mar  4 14:45:08 sborbel-VirtualBox gdm-password]: gkr-pam: stashed password to try later in open session
+Mar  4 14:45:08 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:session): session opened for user sborbel by (uid=0)
+Mar  4 14:45:08 sborbel-VirtualBox systemd-logind[617]: New session 2 of user sborbel.
+Mar  4 14:45:08 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user sborbel by (uid=0)
+Mar  4 14:45:08 sborbel-VirtualBox gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Mar  4 14:45:10 sborbel-VirtualBox gnome-keyring-daemon[1329]: The Secret Service was already initialized
+Mar  4 14:45:10 sborbel-VirtualBox gnome-keyring-daemon[1329]: The PKCS#11 component was already initialized
+Mar  4 14:45:12 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:2 (system bus name :1.79 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  4 14:45:16 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Mar  4 14:45:16 sborbel-VirtualBox systemd-logind[617]: Session c1 logged out. Waiting for processes to exit.
+Mar  4 14:45:16 sborbel-VirtualBox systemd-logind[617]: Removed session c1.
+Mar  4 14:45:17 sborbel-VirtualBox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.48, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  4 14:45:24 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Mar  4 14:45:24 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Mar  4 14:45:26 sborbel-VirtualBox dbus-daemon[576]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Mar  4 14:45:29 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session closed for user gdm
+Mar  4 14:46:22 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Mar  4 14:46:22 sborbel-VirtualBox pkexec[2661]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Mar  4 14:46:25 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Mar  4 14:46:25 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Mar  4 14:49:21 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Mar  4 14:49:21 sborbel-VirtualBox pkexec[3142]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Mar  4 14:56:03 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 14:56:06 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 14:56:06 sborbel-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Mar  4 15:16:16 sborbel-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 15:16:19 sborbel-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 15:16:19 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/usr/bin ; USER=root ; COMMAND=/usr/bin/ln -s /home/sborbel/Documents/l.sh l
+Mar  4 15:16:19 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:16:19 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 15:16:20 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Mar  4 15:16:20 sborbel-VirtualBox pkexec[6120]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Mar  4 15:17:01 sborbel-VirtualBox CRON[6138]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  4 15:17:01 sborbel-VirtualBox CRON[6138]: pam_unix(cron:session): session closed for user root
+Mar  4 15:17:05 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/home/sborbel ; USER=root ; COMMAND=/usr/bin/ln -s /home/sborbel/Documents/l.sh myprog
+Mar  4 15:17:05 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:17:05 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 15:17:41 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/usr/bin ; USER=root ; COMMAND=/usr/bin/ln -s /home/sborbel/Documents/l.sh myprog
+Mar  4 15:17:41 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:17:41 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 15:25:36 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/usr/bin ; USER=root ; COMMAND=/usr/bin/ln -s /home/sborbel/greet.sh greet_me
+Mar  4 15:25:36 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:25:36 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 15:30:01 sborbel-VirtualBox CRON[6242]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  4 15:30:01 sborbel-VirtualBox CRON[6242]: pam_unix(cron:session): session closed for user root
+Mar  4 15:35:52 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 15:35:56 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 15:35:56 sborbel-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Mar  4 15:36:10 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/usr/bin ; USER=root ; COMMAND=/usr/sbin/visudo
+Mar  4 15:36:10 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:41:16 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 15:41:20 sborbel-VirtualBox sudo:  sborbel : TTY=pts/0 ; PWD=/usr/bin ; USER=root ; COMMAND=/usr/sbin/visudo
+Mar  4 15:41:20 sborbel-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Mar  4 15:45:13 sborbel-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Mar  4 16:09:05 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 16:09:09 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar  4 16:09:09 sborbel-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Mar  4 16:17:01 sborbel-VirtualBox CRON[6419]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  4 16:17:01 sborbel-VirtualBox CRON[6419]: pam_unix(cron:session): session closed for user root
+Mar  4 16:30:01 sborbel-VirtualBox CRON[6430]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  4 16:30:01 sborbel-VirtualBox CRON[6430]: pam_unix(cron:session): session closed for user root
+Mar  4 22:30:01 sborbel-VirtualBox CRON[6449]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  4 22:30:01 sborbel-VirtualBox CRON[6449]: pam_unix(cron:session): session closed for user root
+Mar  5 00:07:26 sborbel-VirtualBox CRON[6473]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar  5 00:07:26 sborbel-VirtualBox CRON[6473]: pam_unix(cron:session): session closed for user root
+Mar  5 09:11:51 sborbel-VirtualBox systemd-logind[617]: Power key pressed.
+Mar  5 09:11:51 sborbel-VirtualBox systemd-logind[617]: System is powering down.
+Mar 25 19:16:50 sborbel-VirtualBox systemd-logind[576]: New seat seat0.
+Mar 25 19:16:50 sborbel-VirtualBox systemd-logind[576]: Watching system buttons on /dev/input/event0 (Power Button)
+Mar 25 19:16:50 sborbel-VirtualBox systemd-logind[576]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Mar 25 19:16:50 sborbel-VirtualBox systemd-logind[576]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Mar 25 19:16:57 sborbel-VirtualBox useradd[799]: failed adding user 'vboxadd', data deleted
+Mar 25 19:16:57 sborbel-VirtualBox useradd[800]: failed adding user 'vboxadd', data deleted
+Mar 25 19:16:58 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Mar 25 19:16:58 sborbel-VirtualBox systemd-logind[576]: New session c1 of user gdm.
+Mar 25 19:16:58 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Mar 25 19:17:01 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.47 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar 25 19:17:01 sborbel-VirtualBox CRON[1089]: pam_unix(cron:session): session opened for user root by (uid=0)
+Mar 25 19:17:01 sborbel-VirtualBox CRON[1089]: pam_unix(cron:session): session closed for user root
+Mar 25 19:17:09 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar 25 19:17:14 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar 25 19:17:14 sborbel-VirtualBox gdm-password]: gkr-pam: unable to locate daemon control file
+Mar 25 19:17:14 sborbel-VirtualBox gdm-password]: gkr-pam: stashed password to try later in open session
+Mar 25 19:17:14 sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:session): session opened for user sborbel by (uid=0)
+Mar 25 19:17:14 sborbel-VirtualBox systemd-logind[576]: New session 3 of user sborbel.
+Mar 25 19:17:14 sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user sborbel by (uid=0)
+Mar 25 19:17:15 sborbel-VirtualBox gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Mar 25 19:17:17 sborbel-VirtualBox gnome-keyring-daemon[1267]: The PKCS#11 component was already initialized
+Mar 25 19:17:17 sborbel-VirtualBox gnome-keyring-daemon[1267]: The Secret Service was already initialized
+Mar 25 19:17:19 sborbel-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:3 (system bus name :1.78 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar 25 19:17:26 sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Mar 25 19:17:26 sborbel-VirtualBox systemd-logind[576]: Session c1 logged out. Waiting for processes to exit.
+Mar 25 19:17:26 sborbel-VirtualBox dbus-daemon[535]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Mar 25 19:17:26 sborbel-VirtualBox systemd-logind[576]: Removed session c1.
+Mar 25 19:17:26 sborbel-VirtualBox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.47, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar 25 19:17:29 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Mar 25 19:17:29 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Mar 25 19:18:29 sborbel-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Mar 25 19:18:29 sborbel-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Mar 25 19:18:34 sborbel-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Mar 25 19:18:34 sborbel-VirtualBox pkexec[3318]: sborbel: Executing command [USER=root] [TTY=unknown] [CWD=/home/sborbel] [COMMAND=/usr/lib/update-notifier/package-system-locked]
