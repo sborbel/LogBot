@@ -6,6 +6,7 @@ import ArgumentUtils.GenericUtils as GenericUtils
 import ArgumentUtils.StartDate as StartDate
 import ArgumentUtils.NumDays as NumDays
 import ArgumentUtils.NumHours as NumHours
+import ArgumentUtils.Pattern as Pattern
 #Goose was here
 
 
@@ -82,16 +83,16 @@ if run:
         today = datetime.today()
         date = today - timedelta(days=days)
         logList = NumDays.filterByNumDays(logList, date)
-        #Call NumDays.filterByDays() - TO-DO
     if(args.H):
         hours = int(args.H[0])
         today = datetime.today()
         date = today - timedelta(hours=hours)
         logList = NumHours.filterByNumHours(logList, date)
-        #Call NumHours.filterByHours() - TO-DO
-    if(args.pattern):
-        patternRaw = args.pattern[0]
-        #Call Pattern.filterByPattern() - TO-DO
+    if(args.p):
+        patternRaw = args.p[0]
+        
+        logList = Pattern.filterByPattern(logList, patternRaw)
+
 
 
 

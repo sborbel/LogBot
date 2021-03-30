@@ -14,3 +14,8 @@
         python LogBot.py -d 10 searchtext
     -numHours
         python LogBot.py -H 5 searchtext
+    -pattern
+        python LogBot.py -p gdm
+    
+    -Gotta test -em all
+        python LogBot.py -p gdm -s 2021-03-05

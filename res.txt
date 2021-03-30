@@ -1,1 +1,10 @@
-Mar 30 2021 11:15:50 Logs/syslog1 sborbel-VirtualBox dbus-daemon[1271]: [session uid=1000 pid=1271] Successfully activated service 'org.gnome.gedit'
+Mar 25 2021 19:16:58 Logs/auth1.log sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Mar 25 2021 19:16:58 Logs/auth1.log sborbel-VirtualBox systemd-logind[576]: New session c1 of user gdm.
+Mar 25 2021 19:16:58 Logs/auth1.log sborbel-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Mar 25 2021 19:17:09 Logs/auth1.log sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar 25 2021 19:17:14 Logs/auth1.log sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Mar 25 2021 19:17:14 Logs/auth1.log sborbel-VirtualBox gdm-password]: gkr-pam: unable to locate daemon control file
+Mar 25 2021 19:17:14 Logs/auth1.log sborbel-VirtualBox gdm-password]: gkr-pam: stashed password to try later in open session
+Mar 25 2021 19:17:14 Logs/auth1.log sborbel-VirtualBox gdm-password]: pam_unix(gdm-password:session): session opened for user sborbel by (uid=0)
+Mar 25 2021 19:17:15 Logs/auth1.log sborbel-VirtualBox gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Mar 25 2021 19:17:26 Logs/auth1.log sborbel-VirtualBox gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
