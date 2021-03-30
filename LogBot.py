@@ -32,7 +32,7 @@ parser.add_argument("-e", metavar="--end_date", type=str, nargs=1, help="Date in
 parser.add_argument("-d", metavar="--numDays", type=int, nargs=1, help="Number of days to go back. All resultant log entries that were created on or after numDays before today will be included. Value is ignored if start_date and/or end_date are given.")
 parser.add_argument("-H", metavar="--numHours", type=int, nargs=1, help="Number of hours to go back. All resultant log entries that were created numHours ago or sooner will be included. Value is ignored if start_date and/or end_date are given.")
 parser.add_argument("-c", metavar="--categories", type=str, nargs=1, help="Category/ Categories to filter results by.")
-parser.add_argument("pattern", type=str, nargs=1, help="Regular expression to filter results by.")
+parser.add_argument("-p", metavar="--pattern", type=str, nargs=1, help="Regular expression to filter results by.")
 args = parser.parse_args()
  
 run = True
