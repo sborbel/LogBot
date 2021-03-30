@@ -1,9 +1,11 @@
 import sys
 import HelpPages.MainHelp as MainHelp
 import argparse
-from datetime import datetime, date, time
+from datetime import datetime, date, time, timedelta
 import ArgumentUtils.GenericUtils as GenericUtils
 import ArgumentUtils.StartDate as StartDate
+import ArgumentUtils.NumDays as NumDays
+import ArgumentUtils.NumHours as NumHours
 #Goose was here
 
 
@@ -20,13 +22,9 @@ def CommaToList(CSL):
     return myList
     
 parser = argparse.ArgumentParser(description="Simplifies the log diagnosis process.")
-args = parser.parse_args()
 
-# If no parameters passed, launch gui
-if len(sys.argv) == 1:
-    print('Loading gui...')
-    import LogBot_gui
-    quit()
+
+
 
 
 parser.add_argument("-s", metavar="--start_date", type=str, nargs=1, help="Date in YYYY-MM-DD format to start searching from. All results found to have been logged before this date will be included. If end_date is included only log entries that fall between the start_date and end_date dates will be included.")
@@ -36,47 +34,74 @@ parser.add_argument("-H", metavar="--numHours", type=int, nargs=1, help="Number 
 parser.add_argument("-c", metavar="--categories", type=str, nargs=1, help="Category/ Categories to filter results by.")
 parser.add_argument("pattern", type=str, nargs=1, help="Regular expression to filter results by.")
 args = parser.parse_args()
+ 
+run = True
+
+#If no parameters passed, launch gui
+if len(sys.argv) == 1:
+    print('Loading gui...')
+    import LogBot_gui
+    quit()
+    #run = False
 
 
+if ((args.s or args.e) and (args.d or args.H)):
+    parser.error("start_date and/or end_date may not be given with days or hours")
+    run = False
 
-
-#Make sure that if either/both the -s and/or -e flags are given, the -d and -H flags are not present. Also
-# if the -H flag is present, the -d flag must not be present and vice versa. - TO-DO
-
-if(args.c):
-    categories = CommaToList(args.c[0])
-    #Consolidate by category - TO-DO
-else:
-    #Consolidate all log files
-    logList = GenericUtils.consolidateLogs()
-
-
-if(args.s):
-    #Check if date is valid
-    GenericUtils.checkDate(args.s[0])
+if (args.d and args.H):
+    parser.error("days may not be given with hours")
+    run = False
     
-    start = args.s[0]
-    logList = StartDate.filterByStartDate(logList, args.s[0])
-if(args.e):
-    end = args.e[0]
-    #Call EndDate.filterByEndDate()  - TO-DO
-if(args.d):
-    days = args.d[0]
-    #Call NumDays.filterByDays() - TO-DO
-if(args.H):
-    hours = args.H[0]
-    #Call NumHours.filterByHours() - TO-DO
-if(args.pattern):
-    patternRaw = args.pattern[0]
-    #Call Pattern.filterByPattern() - TO-DO
+
+if run:
+    #print("running")
+
+    #Make sure that if either/both the -s and/or -e flags are given, the -d and -H flags are not present. Also
+    # if the -H flag is present, the -d flag must not be present and vice versa. - TO-DO
+
+    if(args.c):
+        categories = CommaToList(args.c[0])
+        #Consolidate by category - TO-DO
+    else:
+        #Consolidate all log files
+        logList = GenericUtils.consolidateLogs()
+
+
+    if(args.s):
+        #Check if date is valid
+        GenericUtils.checkDate(args.s[0])
+        
+        start = args.s[0]
+        logList = StartDate.filterByStartDate(logList, args.s[0])
+    if(args.e):
+        end = args.e[0]
+        #Call EndDate.filterByEndDate()  - TO-DO
+    if(args.d):
+        days = int(args.d[0])
+        today = datetime.today()
+        date = today - timedelta(days=days)
+        logList = NumDays.filterByNumDays(logList, date)
+        #Call NumDays.filterByDays() - TO-DO
+    if(args.H):
+        hours = int(args.H[0])
+        today = datetime.today()
+        date = today - timedelta(hours=hours)
+        logList = NumHours.filterByNumHours(logList, date)
+        #Call NumHours.filterByHours() - TO-DO
+    if(args.pattern):
+        patternRaw = args.pattern[0]
+        #Call Pattern.filterByPattern() - TO-DO
 
 
 
-#Finalize Results
-def finalizedResults():
+    #Finalize Results
+
     with open('res.txt', 'w') as results:
         for l in logList:
             results.write(l[0].strftime("%b %d %Y %H:%M:%S") + " " + l[2] + " " + l[1] + '\n')
+    
+    print("Completed successfully. Found " + str(len(logList)) +  " result(s)")
 
 
     

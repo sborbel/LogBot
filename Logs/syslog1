@@ -23,3 +23,4 @@ Mar 25 19:19:10 sborbel-VirtualBox gnome-shell[1534]: Window manager warning: Ov
 Mar 25 19:21:07 sborbel-VirtualBox systemd-resolved[494]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
 Mar 25 19:22:50 sborbel-VirtualBox dbus-daemon[1271]: [session uid=1000 pid=1271] Activating service name='org.gnome.gedit' requested by ':1.99' (uid=1000 pid=2765 comm="/usr/bin/nautilus --gapplication-service " label="unconfined")
 Mar 25 19:22:50 sborbel-VirtualBox dbus-daemon[1271]: [session uid=1000 pid=1271] Successfully activated service 'org.gnome.gedit'
+Mar 30 11:15:50 sborbel-VirtualBox dbus-daemon[1271]: [session uid=1000 pid=1271] Successfully activated service 'org.gnome.gedit'

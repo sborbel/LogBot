@@ -59,7 +59,6 @@ def formatDate(dateType, array, filename):
                 year = currYear - 1
             else:
                 year = currYear
-
             logDatetime = datetime(year, month, day, int(hour), int(minute), int(sec))
             splitLine.pop(0)
             splitLine.pop(0)
@@ -92,4 +91,4 @@ def consolidateLogs():
 
 
 
-consolidateLogs()
+#consolidateLogs()
