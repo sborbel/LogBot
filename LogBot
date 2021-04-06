@@ -1,9 +1,11 @@
+#!/usr/bin/python3
 import sys
 import HelpPages.MainHelp as MainHelp
 import argparse
 from datetime import datetime, date, time, timedelta
 import ArgumentUtils.GenericUtils as GenericUtils
 import ArgumentUtils.StartDate as StartDate
+import ArgumentUtils.EndDate as EndDate
 import ArgumentUtils.NumDays as NumDays
 import ArgumentUtils.NumHours as NumHours
 import ArgumentUtils.Pattern as Pattern
@@ -12,13 +14,13 @@ import ArgumentUtils.Pattern as Pattern
 
 
 
-Categories = ["Net", "Auth", "Dev"]
+Categories = ["Auth", "Messages"]
 
 def CommaToList(CSL):
     myList = CSL.split(",")
     for cat in myList:
         if not cat in Categories:
-            print("Error: Category " + cat + "is not supported. Supported options are: " + ', '.join(Categories))
+            print("Error: Category \"" + cat + "\" is not supported. Supported options are: " + ', '.join(Categories))
             exit(0)
     return myList
     
@@ -28,8 +30,8 @@ parser = argparse.ArgumentParser(description="Simplifies the log diagnosis proce
 
 
 
-parser.add_argument("-s", metavar="--start_date", type=str, nargs=1, help="Date in YYYY-MM-DD format to start searching from. All results found to have been logged before this date will be included. If end_date is included only log entries that fall between the start_date and end_date dates will be included.")
-parser.add_argument("-e", metavar="--end_date", type=str, nargs=1, help="Date in YYYY-MM-DD format to end searching from. All results found to have been logged after this date will be included. If start_date is included only log entries that fall between the start_date and end_date dates will be included.")
+parser.add_argument("-s", metavar="--start_date", type=str, nargs=1, help="Date in YYYY-MM-DD format to start searching from. All results found to have been logged after this date will be included. If end_date is included only log entries that fall between the start_date and end_date dates will be included.")
+parser.add_argument("-e", metavar="--end_date", type=str, nargs=1, help="Date in YYYY-MM-DD format to end searching from. All results found to have been logged after this date will be excluded. If start_date is included only log entries that fall between the start_date and end_date dates will be included.")
 parser.add_argument("-d", metavar="--numDays", type=int, nargs=1, help="Number of days to go back. All resultant log entries that were created on or after numDays before today will be included. Value is ignored if start_date and/or end_date are given.")
 parser.add_argument("-H", metavar="--numHours", type=int, nargs=1, help="Number of hours to go back. All resultant log entries that were created numHours ago or sooner will be included. Value is ignored if start_date and/or end_date are given.")
 parser.add_argument("-c", metavar="--categories", type=str, nargs=1, help="Category/ Categories to filter results by.")
@@ -39,10 +41,10 @@ args = parser.parse_args()
 run = True
 
 #If no parameters passed, launch gui
-if len(sys.argv) == 1:
-    print('Loading gui...')
-    import LogBot_gui
-    quit()
+#if len(sys.argv) == 1:
+    #print('Loading gui...')
+    #import LogBot_gui
+    #quit()
     #run = False
 
 
@@ -64,6 +66,7 @@ if run:
     if(args.c):
         categories = CommaToList(args.c[0])
         #Consolidate by category - TO-DO
+        logList = GenericUtils.consolidateLogsByCategory(args.c[0])
     else:
         #Consolidate all log files
         logList = GenericUtils.consolidateLogs()
@@ -77,7 +80,7 @@ if run:
         logList = StartDate.filterByStartDate(logList, args.s[0])
     if(args.e):
         end = args.e[0]
-        #Call EndDate.filterByEndDate()  - TO-DO
+        EndDate.filterByEndDate(logList, args.e[0])
     if(args.d):
         days = int(args.d[0])
         today = datetime.today()

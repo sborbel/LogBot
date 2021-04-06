@@ -70,6 +70,25 @@ def formatDate(dateType, array, filename):
             
         
 
+def consolidateLogsByCategory(cats):
+    categories = cats.split(",")
+    formattedLines = []
+    delimeter = "#$"
+    with open('logFiles.txt', 'r') as logLocations:
+        lines = logLocations.readlines()
+    logLocations.close()
+    for logFile in lines:
+        logCat = logFile.split(delimeter)[2].strip()
+        if logCat in categories:
+            with open(logFile.split(delimeter)[0], 'r') as currentLog:
+                logLines = currentLog.readlines()
+            dateType = int(logFile.split(delimeter)[1])
+            formattedLines.extend(formatDate(dateType, logLines, logFile.split(delimeter)[0]))
+
+    result = sorted(formattedLines, key=lambda x: x[0])
+    
+    
+    return result
 
 def consolidateLogs():
     formattedLines = []

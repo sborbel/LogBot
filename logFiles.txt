@@ -1,2 +1,2 @@
-Logs/auth1.log#$1#$Auth
-Logs/syslog1#$1#$System
+Logs/auth.log#$1#$Auth
+Logs/syslog#$1#$Messages
