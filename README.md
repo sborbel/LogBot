@@ -7,15 +7,21 @@
 
 ## Example Usage
 
-    -start date: 
-        python LogBot.py -s 2021-02-28 searchtext
-        python LogBot.py -s 2021-03-10 searchtext
+    -start date/ end date: 
+        ./LogBot -s 2021-02-28 -p searchtext
+        ./LogBot -e 2021-03-10 -p searchtext
+        ./LogBot -s 2021-02-28 -e 2021-03-10 -p searchtext
+      
     -numDays:
-        python LogBot.py -d 10 searchtext
+        ./LogBot -d 10 -p searchtext
     -numHours
-        python LogBot.py -H 5 searchtext
+        ./LogBot -H 5 -p searchtext
     -pattern
-        python LogBot.py -p gdm
+        ./LogBot -p gdm
+    -Category
+        ./LogBot -c -p Auth
+        ./LogBot -c 
     
     -Gotta test -em all
-        python LogBot.py -p gdm -s 2021-03-05
+        ./LogBot -p gdm -s 2021-03-05
+        
