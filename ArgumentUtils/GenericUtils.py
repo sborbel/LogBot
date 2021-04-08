@@ -1,4 +1,5 @@
 from datetime import datetime, date, time
+from textwrap import wrap
 
 def getMonthFromShortName(shortName):
     if(shortName == "Jan"):
@@ -29,7 +30,9 @@ def getMonthFromShortName(shortName):
         return 0
     
 def checkDate(date):
-    splitDate = date.split('-')
+    date = wrap(date, 10)
+    print("TEST: " + date[0])
+    splitDate = date[0].split('-')
     year = int(splitDate[0])
     month = int(splitDate[1])
     day = int(splitDate[2])
@@ -37,7 +40,7 @@ def checkDate(date):
     try:
         datetime(year, month, day)
     except ValueError:
-        print("Error: Invalid date of " + date + " given - Exiting")
+        print("Error: Invalid date of " + date[0] + " given - Exiting")
         exit(0)
 
 
